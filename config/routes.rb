@@ -2,7 +2,7 @@ SchoolCode::Application.routes.draw do
   get "users/new"
 
   root  'static_pages#home'
-  match '/signup',  to: 'users#new',            via: 'get'
+  match '/registro',  to: 'users#new',            via: 'get'
   match '/ayuda',    to: 'static_pages#help',    via: 'get'
   match '/nosotros',   to: 'static_pages#about',   via: 'get'
   match '/contacto', to: 'static_pages#contact', via: 'get'
