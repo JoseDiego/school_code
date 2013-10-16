@@ -33,5 +33,9 @@ SchoolCode::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+<<<<<<< HEAD
+=======
+  
+>>>>>>> sign-up
   ActiveModel::SecurePassword.min_cost = true
 end
