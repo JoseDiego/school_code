@@ -4,7 +4,8 @@
       <%= link_to "School of Code", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <% if signed_in? %>
+          <% if signed_in? %>          
+            <li><%= link_to "Usuarios", users_path %></li>
             <li><%= link_to "Nivel 0", '#' %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -12,7 +13,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><%= link_to "Perfil", current_user %></li>
-                <li><%= link_to "Configuracion", '#' %></li>
+                <li><%= link_to "Configuracion", edit_user_path(current_user) %></li>
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Cerrar Sesion", signout_path, method: "delete" %>
