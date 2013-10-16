@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       flash[:success] = "Bienvenido a School of Code!"
       redirect_to @user
     else
-          render 'new'
+      render 'new'
     end
   end
 
