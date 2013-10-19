@@ -1,6 +1,18 @@
 <section>
 <h1>
-    <%= gravatar_for @user %>
-    <%= @user.name %>
+	<p>
+    <%= gravatar_for @user, size: 120 %>
+    <%= @user.name %><br>
+    <small>Hola a todos!</small><br>
+    Correo: <em><%= @user.email %></em>
+	</p>
 </h1>
 </section>
+<div class="well well-large">
+	<h1>Nivel : 0 </h1>
+	<h2>Puntos Totales : 0 </h2>
+	<h2>Ejercicios Resueltos : 0/100</h2>
+	<div class="progress progress-striped active">
+    	<div class="bar" style="width: 0%;"></div>
+    </div>
+</div>
