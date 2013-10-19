@@ -1,3 +1,4 @@
+
 <section>
 <h1>
 	<p>
@@ -9,10 +10,14 @@
 </h1>
 </section>
 <div class="well well-large">
-	<h1>Nivel : 0 </h1>
-	<h2>Puntos Totales : 0 </h2>
-	<h2>Ejercicios Resueltos : 0/100</h2>
-	<div class="progress progress-striped active">
-    	<div class="bar" style="width: 0%;"></div>
-    </div>
+	<% unless current_user.admin? %>
+		<h1>Nivel : 0 </h1>
+		<h2>Puntos Totales : 0 </h2>
+		<h2>Ejercicios Resueltos : 0/100</h2>
+		<div class="progress progress-striped active">
+	    	<div class="bar" style="width: 0%;"></div>
+	    </div>
+	<% else %>
+		<h1>Administrador</h1>
+	<% end %>
 </div>
