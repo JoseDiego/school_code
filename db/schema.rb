@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131018003010) do
+ActiveRecord::Schema.define(version: 20131026090305) do
+
+  create_table "exercises", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "solution"
+    t.integer  "level_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "exercises", ["level_id"], name: "index_exercises_on_level_id"
+
+  create_table "levels", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "dificulty"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"

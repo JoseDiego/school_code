@@ -1,0 +1,46 @@
+<section>
+	<h1><%= @level.title %></h1>
+	<p>
+	  <strong>Descripcion:</strong>
+	  <%= @level.description %><br>
+	  <strong>Dificultad:</strong>
+	  <%= current_name_level(@level.dificulty) %>
+	</p>
+
+	<h2>Ejercicios</h2>
+
+	<% if @level.exercises.count != 0 %>
+	<%= render 'exercises/opc' %>
+	<table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Descripcion</th>
+          <th>Solucion</th>
+          <th>Seleccionar</th>
+        </tr>
+      </thead>
+	  <tbody>
+		<%= render @level.exercises %>
+	  </tbody>
+	</table>
+	<% else %>
+		<div class="alert alert-error">
+    		<h4>No hay ejercicios</h4>Agrega un ejercicio para la comunidad abajo
+    	</div>
+	<% end %>
+
+	<h2>Agrega un Ejercicio</h2>
+
+	<%= render "exercises/form" %>
+	 
+	<div class="row">
+		<div class="span2 offset1">
+			    <%= link_to 'Edita este Nivel', edit_level_path(@level) , class: "btn" %>
+			    	
+		</div>
+		<div class="span2">
+	    		<%= link_to 'Regresar', levels_path , class: "btn" %>
+	    </div>
+	</div>
+</section>

@@ -1,4 +1,7 @@
 SchoolCode::Application.routes.draw do
+  resources :levels do
+    resources :exercises
+  end
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   root  'static_pages#home'

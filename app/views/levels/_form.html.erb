@@ -1,0 +1,31 @@
+<%= form_for :level , url: levels_path do |f| %>
+		<% if @level.errors.any? %>
+		  <div id="error_explanation">
+		    <div class="alert alert-error">
+		      The form contains <%= pluralize(@level.errors.count, "error") %>.
+		    </div>
+		    <ul>
+		    <% @level.errors.full_messages.each do |msg| %>
+		      <li>* <%= msg %></li>
+		    <% end %>
+		    </ul>
+		  </div>
+		<% end %>
+	      <%= f.label :title,"Titulo" %>
+	      <%= f.text_field :title %>
+
+	      <%= f.label :description, "Descripcion" %>
+	      <%= f.text_area :description %>
+
+	      <%= f.label :dificulty, "Dificultad" %>
+	      <%= f.select(:dificulty, [['Facil',1],['Intermedio',2],['Avanzado',3]]) %>
+	      <div class="row">
+	      	<div class="span2 offset1">
+		    	<%= f.submit "Aceptar", class: "btn btn-large btn-primary" %>
+		    	
+		    </div>
+		    <div class="span2">
+      			<%= link_to 'Cancelar', levels_path , class: "btn btn-large btn-danger" %>
+    		</div>
+	  	  </div>
+<% end %>

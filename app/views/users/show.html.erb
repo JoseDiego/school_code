@@ -1,5 +1,5 @@
 <% provide(:title, @user.name) %>
-<% if current_user.admin? %>
+<% if @user.admin? %>
 <div class="row">
   <aside class="span9">
   	<div class="tabbable"> 

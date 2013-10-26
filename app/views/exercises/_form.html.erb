@@ -1,0 +1,11 @@
+  <%= form_for([@level, @level.exercises.build]) do |f| %>
+    <p>
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+      <%= f.label :description %><br />
+      <%= f.text_field :description %>
+      <%= f.label :solution %><br />
+      <%= f.text_field :solution %>
+      <%= f.submit "Aceptar", class: "btn btn-large btn-primary" %>
+    </p>
+  <% end %>
