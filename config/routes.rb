@@ -11,6 +11,7 @@ SchoolCode::Application.routes.draw do
   match '/ayuda',    to: 'static_pages#help',    via: 'get'
   match '/nosotros',   to: 'static_pages#about',   via: 'get'
   match '/contacto', to: 'static_pages#contact', via: 'get'
+  match '/niveles',  to: 'levels#index',            via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
