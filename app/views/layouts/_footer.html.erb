@@ -1,13 +1,56 @@
 <footer class="footer">
-  <small>
-    <a href="#">©Copyleft - Todos los errores reservados.</a>
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to "Nosotros",   nosotros_path %></li>
-      <li><%= link_to "Contactanos", contacto_path %></li>
-      <li><%= link_to "¿Necesitas Ayuda?",    ayuda_path %></li>
-    </ul>
-  </nav>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span8">
+          <center>
+            <blockquote>
+              <p><%= link_to "School of Code", root_path, id: "logo-inverse" %></p>
+              <small>Aprende a Programar</small>
+            </blockquote><br><br><br><br><br><br>
+          </center>
+          <div class="span9 centered-pills">
+              <ul class="nav nav-pills">
+                <li><%= link_to "Ayuda",    ayuda_path %></li>
+                <li><%= link_to "Nosotros",   nosotros_path %></li>
+                <li><%= link_to "Contacto", contacto_path %></li>
+                 <li class="disabled"><a href="#">School of Code©</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="span4 footer-right">
+           <ul class="links">
+            <li class="li">
+                <h4>SchoolCode En Linea</h4>
+                <ul class="external">
+                  <li class="link">
+                    <span class="icon"><%= image_tag("twitter.png", :alt => "") %></span>
+                    <a href="#">Siguenos en Twitter</a>
+                  </li>
+                  <li class="link">
+                    <span class="icon"><%= image_tag("facebook.png", :alt => "") %></span>
+                    <a href="#">Encuentranos en Facebook</a>
+                  </li>
+                  <li class="link">
+                    <span class="icon"><%= image_tag("youtube.png", :alt => "") %></span>
+                    <a href="#">Visitanos en Youtube</a>
+                  </li>
+                  <li class="link">
+                    <span class="icon"><%= image_tag("blogger.png", :alt => "") %></span>
+                    <a href="#">Lee nuestro Blog</a>
+                  </li>
+                </ul>
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--<small>
+      
+    </small>
+    <nav>
+       <ul>
+        
+      </ul>
+    </nav>-->
 </footer>
-

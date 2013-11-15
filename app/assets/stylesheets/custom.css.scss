@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 section {
@@ -33,7 +33,14 @@ textarea {
     margin-bottom: 10px;
   }
 }
-
+.container.home{
+  width:1000px;
+  margin-top: -15px;
+}
+p.default{
+  font-size:14px;
+  line-height: 20px;
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -79,7 +86,21 @@ p {
     text-decoration: none;
   }
 }
-
+#logo-inverse {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.0em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 2px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+}
 /* footer */
 
 footer {
@@ -101,7 +122,31 @@ footer {
     list-style: none;
     li {
       float: left;
-      margin-left: 10px;
+    }
+  }
+}
+ul.links{
+  float:left;
+  padding:12px;
+  li{
+    h4{
+      padding: 0 0 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    ul.external{
+      li.link{
+        span.icon{
+            margin-right: 5px;
+            display: incline-block;
+            display: inline-block;
+            vertical-align: text-top;
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 16px;
+            background-position: center center;
+        }
+      }
     }
   }
 }
@@ -180,4 +225,10 @@ input {
       border-bottom: 1px solid $grayLighter;
     }
   }
+}
+.footer-right {
+  border-left: 1px solid #CCC;
+}
+.hero-unit.home{
+  background-color: white;
 }
