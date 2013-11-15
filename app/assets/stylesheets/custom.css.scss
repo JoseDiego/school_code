@@ -142,9 +142,11 @@ ul.links{
             display: inline-block;
             vertical-align: text-top;
             background-repeat: no-repeat;
-            width: 16px;
-            height: 16px;
             background-position: center center;
+            img{
+              width: 16px;
+              height: 16px;
+            }
         }
       }
     }
