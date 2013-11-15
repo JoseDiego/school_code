@@ -3,9 +3,11 @@ SchoolCode::Application.routes.draw do
     resources :exercises
   end
   resources :users
+  resources :courses
   resources :sessions, only: [:new, :create, :destroy]
-  root  'static_pages#home'
-  
+  root 'passthrough#index'
+  #root  'static_pages#home'
+  match '/index',    to: 'static_pages#home',    via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
@@ -13,6 +15,7 @@ SchoolCode::Application.routes.draw do
   match '/nosotros',   to: 'static_pages#about',   via: 'get'
   match '/contacto', to: 'static_pages#contact', via: 'get'
   match '/niveles',  to: 'levels#index',            via: 'get'
+  match '/cursos',  to: 'courses#index',            via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

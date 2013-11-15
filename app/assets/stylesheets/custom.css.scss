@@ -3,6 +3,16 @@
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+@font-face {
+  font-family: 'Ppetrial';
+  src:url('/assets/ppetrial.eot');
+  src:url('/assets/ppetrial.eot?#iefix') format('embedded-opentype'),
+    url('/assets/ppetrial.svg#ppetrial') format('svg'),
+    url('/assets/ppetrial.woff') format('woff'),
+    url('/assets/ppetrial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -233,4 +243,18 @@ input {
 }
 .hero-unit.home{
   background-color: white;
+}
+.hero-unit.courses{
+
+  background: #CCC url("header-courses.png");
+  h1.custom-font{
+    font-family: "Ppetrial", helvetica, Verdana, Tahoma;
+    color: white;
+    padding-top:40px;
+  }
+  p{
+    
+    font-size: 30px;
+    color: red;
+  }
 }
