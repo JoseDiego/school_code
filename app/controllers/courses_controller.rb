@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
-	def index
+	def index 
+		@levels = Level.all
 	end
 end

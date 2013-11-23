@@ -1,9 +1,28 @@
-<div class="hero-unit courses">
-	<center>
-  		<h1 class="custom-font">Bienvenido! A continuacion tienes una lista de Cursos Disponibles</h1>
-  		<p> <%= link_to "Pulsa Aqui si eres Nuevo", courses_path , class: "btn btn-danger btn-large" %></p>
-  	</center>
-</div>
-<div class="container">
-	<%= render "courses" %>
-</div>
+<section>
+  <h1>Lista de Niveles</h1>
+  <p>
+    <%= render 'levels/opc' %>
+  </p>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Descripcion</th>
+          <th>Dificultad</th>
+          <th>Cant. Ejercicios</th>
+          <th>Seleccionar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @levels.each do |level| %>
+          <tr>
+            <td><%= level.title %></td>
+            <td><%= level.description %></td>
+            <td><%= current_name_level level.dificulty %></td>
+            <td><%= level.exercises.count %></td>
+            <td><label class="checkbox inline"><input type="checkbox" id="inlineCheckbox1" value="option1"></label></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</section>

@@ -1,0 +1,26 @@
+<div class="center hero-unit">
+  <h1>Bienvenido!!</h1>
+  <p class="muted">A Continuacion la Lista de Cursos que tenemos para ti!</p>
+  <%= link_to "Click aqui si eres nuevo", '#' , class: "btn btn-large " %>
+</div>
+<section id="thumbnails">
+  <div class="row-fluid">
+    <ul class="thumbnails">
+      <% @levels.each do |level| %>
+        <li class="span4">
+          <div class="thumbnail">
+            <div class="caption">
+              <center>
+                <h3><%= level.title %></h3>
+                  <p><%= level.description %></p>
+                  <p>
+                    <%= link_to "Ver este Curso", track_path(level) , class: "btn btn-info" %>
+                  </p>
+              </center>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>  
